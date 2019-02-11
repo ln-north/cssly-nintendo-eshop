@@ -1,0 +1,185 @@
+:root {
+    --nintendo-shop-orange: #F28730;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: a-otf-ud-shin-go-pr6n, sans-serif;
+}
+
+.es-Root {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    padding-bottom: 64px;
+}
+
+.es-Main {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+
+.es-Navigation {
+    flex-basis: 360px;
+    flex-shrink: 0;
+    background-color: var(--nintendo-shop-orange);
+}
+
+.es-Content {
+    flex-basis: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    padding: 48px 64px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #F1F1F1;
+}
+
+.es-Footer {
+    position: fixed;
+    bottom: 0;
+    height: 64px;
+    width: 100%;
+    background-color: #E8E8E8;
+}
+
+.es-NavigationList {
+    padding-top: 48px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.es-NavigationList_Item {
+    width: 100%;
+    flex-basis: 72px;
+    flex-shrink: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 80px;
+    text-decoration: none;
+    outline: none;
+    color: rgba(255, 255, 255, .5);
+    transition: background-color 80ms ease;
+    font-size: 16px;
+}
+.es-NavigationList_Item:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, .15);
+}
+
+.es-ContentHeader {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 48px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.es-ContentHeader_Title {
+    font-size: 18px;
+}
+
+.es-AccountInformation {
+    margin-left: auto;
+    margin-right: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    padding-right: 16px;
+}
+
+.es-AccountInformation::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+    border-color: var(--nintendo-shop-orange) var(--nintendo-shop-orange) transparent transparent;
+    border-style: solid;
+    transform: translateY(-50%) rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.es-AccountThumbnailImage {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    box-shadow: 0 0 0 2px #fff, 1px 0 1px 0 rgba(0, 0, 0, .18);
+}
+
+.es-ContentList {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 16px;
+    flex-grow: 1;
+}
+
+.es-ContentCard {
+    flex-basis: calc((100% - 8px * 2) / 3);
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgab(0, 0, 0, .18);
+}
+
+.es-ContentCard + .es-ContentCard {
+    margin-left: 8px;
+}
+
+.es-ContentCard:nth-of-type(3n + 1) {
+    margin-left: 0;
+}
+
+.es-ContentCard:nth-of-type(n + 4) {
+    margin-top: 8px;
+}
+
+.es-ContentCard_Thumbnail {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.es-ContentCard_Sumary {
+    height: 72px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 8px 8px;
+}
+
+.es-Price {
+}
+
+.es-Price_Value {
+    display: inline;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.es-Price_YenUnit {
+    display: inline;
+    font-size: 14px;
+    line-height: 24px;
+    vertical-align: baseline;
+    margin-left: -2px;
+}
